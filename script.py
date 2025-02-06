@@ -11,8 +11,8 @@ import os
 URL = "https://apps.urv.cat/Fitxar/Inici.do"
 HOLIDAYS_FILE = "holidays.txt"
 
-USERNAME = os.getenv("CLOCK-IN-USERNAME")
-PASSWORD = os.getenv("CLOCK-IN-PASSWORD")
+USERNAME = os.getenv("CLOCK_IN_USERNAME")
+PASSWORD = os.getenv("CLOCK_IN_PASSWORD")
 
 def is_holiday(today):
     try:
