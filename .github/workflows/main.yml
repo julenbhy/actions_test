@@ -1,0 +1,27 @@
+name: Auto clock-in
+
+on:
+  schedule:
+    - cron: '0 7 * * 1-5' # Runs at 7:00 from monday to Friday
+    - cron: '30 14 * * 1-5' # Runs at 14:30 from monday to Friday
+    - cron: '30 15 * * 1' # Runs at 13:30 on monday
+    - cron: '00 17 * * 1' # Runs at 17:00 on monday
+
+jobs:
+  fichaje:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone the repo
+        uses: actions/checkout@v4
+
+      - name: Configure Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install selenium
+
+      - name: Run the script
+        run: python script.py
