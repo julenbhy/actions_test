@@ -26,9 +26,11 @@ def is_holiday(today):
 def main():
     today = datetime.date.today().strftime("%Y-%m-%d")
     
+    print("Checking if today is a holiday")
     if is_holiday(today):
         print(f"Today ({today}) is a holiday. Clock-in will not be performed.")
         return
+    print(f"Today ({today}) is not a holiday. Proceeding with clock-in.")
     
     options = Options()
     options.add_argument('--headless')
