@@ -7,6 +7,11 @@ on:
     - cron: '30 15 * * 1' # Runs at 13:30 on monday
     - cron: '00 17 * * 1' # Runs at 17:00 on monday
 
+# Get environment variables from the repository secrets
+env:
+  CLOCK_IN_USERNAME: ${{ secrets.CLOCK_IN_USERNAME }}
+  CLOCK_IN_PASSWORD: ${{ secrets.CLOCK_IN_PASSWORD }}
+
 jobs:
   fichaje:
     runs-on: ubuntu-latest
