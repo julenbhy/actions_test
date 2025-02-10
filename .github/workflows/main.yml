@@ -5,7 +5,7 @@ on:
     - cron: '50 7 * * 1-5' # Runs at 8:00 from monday to Friday
     - cron: '20 14 * * 1-5' # Runs at 14:30 from monday to Friday
     - cron: '20 15 * * 1' # Runs at 15:30 on monday
-    - cron: '05 17 * * 1' # Runs at 18:00 on monday
+    - cron: '50 17 * * 1' # Runs at 18:00 on monday
 
 # Get environment variables from the repository secrets
 env:
